@@ -2,9 +2,9 @@
 Description=Gunicorn daemon to serve my flaskapp
 After=network.target
 [Service]
-User=ubuntu
-Group=www-data
-WorkingDirectory=/home/ubuntu/498mp2server
-ExecStart=/home/ubuntu/498mp2server/venv/bin/gunicorn serve
+User=ec2-user
+Group=ec2-user
+WorkingDirectory=/home/ec2-user/498mp2server
+ExecStart=/home/ec2-user/498mp2server/venv/bin/gunicorn serve
 [Install]
 WantedBy=multi-user.target
